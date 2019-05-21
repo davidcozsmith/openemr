@@ -55,9 +55,9 @@ if ($GLOBALS['weno_rx_enable'] != 1) {
 }
 
 if ($tableHasData['count'] > 1) {
-    print xlt("Formularies are inserted into table")."<br>";
+    print xlt("xFormularies are inserted into table")."<br>";
 } else {
-    echo "<a href='drugDataInsert.php?csrf_token_form=" . attr_url(collectCsrfToken()) . "' class='btn btn-default'>".xlt("Import Formularies")."</a> <br>".xlt("Be patient, this can take a while.");
+    echo "<a href='drugDataInsert.php?csrf_token_form=" . attr_url(collectCsrfToken()) . "' class='btn btn-default'>".xlt("xImport Formularies")."</a> <br>".xlt("Be patient, this can take a while.");
 }
 
 ?>
