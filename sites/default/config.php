@@ -1,4 +1,7 @@
 <?php
+//enable weno by default
+$GLOBALS['weno_rx_enable'] = 1;
+
 //used differently by different applications, intuit programs only like numbers
 $GLOBALS['oer_config']['ofx']['bankid']     = "123456789";
 
