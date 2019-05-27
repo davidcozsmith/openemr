@@ -175,7 +175,7 @@ $mailOrder = $tData->mailOrderPharmacy();
                     $.ajax({
                         type: 'POST',
                         dataType: 'JSON',
-                        url: 'https://apa.openmedpractice.com/apa/interface/weno/receivingrx.php?',
+                        url: 'https://prod-01.eastus.logic.azure.com:443/workflows/1e2e517ea17f4e19a10b6eeef649509f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ctdtVybcx_4vIefjobRGMDvzJLi9juFnDmtglUG4izg',
                         data: {"scripts": value},
 
                         success: function (response) {
@@ -215,7 +215,7 @@ $mailOrder = $tData->mailOrderPharmacy();
 <br>
 
 <footer>
-    <p><?php print xlt("Open Med Practice and its suppliers use their commercially reasonable efforts to provide the most current and complete data available to them concerning prescription histories, drug interactions and formularies, patient allergies and other factors, but by your use of this service you acknowledge that (1) the completeness and accuracy of such data depends upon the completeness and accuracy with which it is entered into connected electronic databases by physicians, physician’s offices, pharmaceutical benefits managers, electronic medical records firms, and other network participants, (2) such data is subject to error or omission in input, storage or retrieval, transmission and display, technical disruption, power or service outages, or other interruptions in electronic communication, any or all of which may be beyond the control of Open Med Practice and its suppliers, and (3) some information may be unavailable due to regulatory, contractual, privacy or other legal restrictions. You are responsible to use your clinical judgment at all times in rendering medical service and advice."); ?></p>
+    <p><?php print xlt("xOpen Med Practice and its suppliers use their commercially reasonable efforts to provide the most current and complete data available to them concerning prescription histories, drug interactions and formularies, patient allergies and other factors, but by your use of this service you acknowledge that (1) the completeness and accuracy of such data depends upon the completeness and accuracy with which it is entered into connected electronic databases by physicians, physician’s offices, pharmaceutical benefits managers, electronic medical records firms, and other network participants, (2) such data is subject to error or omission in input, storage or retrieval, transmission and display, technical disruption, power or service outages, or other interruptions in electronic communication, any or all of which may be beyond the control of Open Med Practice and its suppliers, and (3) some information may be unavailable due to regulatory, contractual, privacy or other legal restrictions. You are responsible to use your clinical judgment at all times in rendering medical service and advice."); ?></p>
 </footer>
 </body>
 </html>
