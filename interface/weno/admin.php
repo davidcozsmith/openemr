@@ -54,10 +54,17 @@ if ($GLOBALS['weno_rx_enable'] != 1) {
     print xlt("Weno Service is Enabled")."<br><br>";
 }
 
-if ($tableHasData['count'] > 1) {
-    print xlt("Formularies are inserted into table....")."<br>";
+$drugData = $tables->drugTableInfo();
+if (!$drugData['ndc']) {
+    echo "<a href='drugPaidInsert.php?csrf_token_form=" . attr_url(collectCsrfToken()) . "' class='btn btn-default'>".xlt("Import Old Formularies")."</a> <br>".xlt("Be patient, this can take a while.");
 } else {
-    echo "<a href='drugDataInsert.php?csrf_token_form=" . attr_url(collectCsrfToken()) . "' class='btn btn-default'>".xlt("Import Formularies....")."</a> <br>".xlt("Be patient, this can take a while.");
+    print xlt("Old formularies are inserted into table")."<br>";
+}
+
+if ($tableHasData['count'] > 1) {
+    print xlt("New Formularies are inserted into table....")."<br>";
+} else {
+    echo "<a href='drugDataInsert.php?csrf_token_form=" . attr_url(collectCsrfToken()) . "' class='btn btn-default'>".xlt("Import New Formularies....")."</a> <br>".xlt("Be patient, this can take a while.");
 }
 
 ?>

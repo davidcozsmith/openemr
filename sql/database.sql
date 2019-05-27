@@ -1526,9 +1526,25 @@ CREATE  TABLE `erx_ttl_touch` (
 -----------------------------------------------------------
 
 --
+-- Table structure for table `erx_drug_paid`
+--
+DROP TABLE IF EXISTS `erx_drug_paid`;
+CREATE TABLE `erx_drug_paid` (
+  `drugid` int(11) NOT NULL AUTO_INCREMENT,
+  `drug_label_name` varchar(45) NOT NULL,
+  `ahfs_descr` varchar(45) NOT NULL,
+  `ndc` bigint(12) NOT NULL,
+  `price_per_unit` decimal(5,2) NOT NULL,
+  `avg_price` decimal(6,2) NOT NULL,
+  `avg_price_paid` int(6) NOT NULL,
+  `avg_savings` decimal(6,2) NOT NULL,
+  `avg_percent` decimal(6,2) NOT NULL,
+   PRIMARY KEY (`drugid`)
+   ) ENGINE=InnoDB;
+
+--
 -- Table structure for table `erx_weno_drugs`
 --
-
 DROP TABLE IF EXISTS `erx_weno_drugs`;
 CREATE TABLE IF NOT EXISTS `erx_weno_drugs` (
   `drug_id` int(11) NOT NULL AUTO_INCREMENT,

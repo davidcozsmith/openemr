@@ -1392,9 +1392,9 @@ ADD `x12_default_eligibility_id` INT
 (11)  DEFAULT NULL;
 #Endif
 
-#IfTable erx_drug_paid
-DROP TABLE `erx_drug_paid`;
-#Endif
+-- #IfTable erx_drug_paid
+-- DROP TABLE `erx_drug_paid`;
+-- #Endif
 
 #IfNotTable erx_weno_drugs
 CREATE TABLE `erx_weno_drugs`
